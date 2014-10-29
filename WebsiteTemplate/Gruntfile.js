@@ -27,7 +27,7 @@ module.exports =
       concat: {
         dist: {
           src: ['<%=srcfolder%>/js/*.js', '<%=srcfolder%>/js/**/*.js'],
-          dest: '<%=distfolder%>/js/<%= pkg.name %>.js',
+          dest: '<%=distfolder%>/js/main.js',
         },
       },
       jsbeautifier: {
@@ -61,7 +61,7 @@ module.exports =
         },
         dist: {
           files: {
-            '<%=distfolder%>/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+            '<%=distfolder%>/js/main.min.js': ['<%= concat.dist.dest %>']
           }
         }
       },
