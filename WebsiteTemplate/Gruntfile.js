@@ -16,13 +16,17 @@ module.exports =
       },
       copy: {
         html: {
-          src: ['<%=srcfolder%>/html'],
-          dest: '<%=distfolder%>/html',
+          expand: true,
+          cwd: '<%=srcfolder%>/html',
+          src: ['**'],
+          dest: '<%=distfolder%>/html'
         },
         index: {
-          src: ['<%=srcfolder%>/index.html'],
-          dest: '<%=distfolder%>/index.html',
-        }
+          expand: true,
+          cwd: '<%=srcfolder%>/',
+          src: ['*.html'],
+          dest: '<%=distfolder%>/',
+        },
       },
       concat: {
         dist: {
